@@ -1,11 +1,12 @@
 spring:
   application:
     name: spring-ai-embabel
-  main:
-    web-application-type: none
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
+    mcp:
+      server:
+        protocol: STREAMABLE
   swagger-ui:
     path: /swagger-ui.html
 embabel:
@@ -17,3 +18,6 @@ embabel:
 boardgame:
   rules:
     path: gamerules
+server:
+  port: 8081
+

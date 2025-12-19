@@ -4,6 +4,7 @@ package com.jmdecerio.spring_ai_embabel.agents;
 import com.embabel.agent.api.annotation.AchievesGoal;
 import com.embabel.agent.api.annotation.Action;
 import com.embabel.agent.api.annotation.Agent;
+import com.embabel.agent.api.annotation.Export;
 import com.embabel.agent.api.common.OperationContext;
 import com.embabel.agent.domain.io.UserInput;
 import com.jmdecerio.spring_ai_embabel.model.*;
@@ -16,16 +17,15 @@ import org.stringtemplate.v4.ST;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.time.Instant;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 @Slf4j
-@Agent(
-        name = "GameInfoAgent",
+@Agent( name = "GameInfoAgent",
         description = "An agent that helps users answer questions " +
                 "about board games, including mechanics and player counts.",
         version = "1.0.0")
-
 public class GameInfoAgent {
 
     @Value("classpath:/promptTemplates/mechanicsDeterminer.st")
@@ -51,8 +51,12 @@ public class GameInfoAgent {
     }
 
     @Action
-    @AchievesGoal(description = "Game mechanics have been determined.")
-    public GameMechanics determineGameMechanics(MechanicsIntent intent, GameRules gameRules, OperationContext context) {
+    @AchievesGoal(description = "Game mechanics have been determined.",
+            export = @Export(
+                    name = "gameMechanics",
+                    remote = true,
+                    startingInputTypes = UserInput.class))
+    public GameMechanics determineGameMechanics(UserInput userInput, GameRules gameRules, OperationContext context) {
         log.info("Determining mechanics from rules for: {}",
                 gameRules.gameTitle());
 
@@ -64,8 +68,12 @@ public class GameInfoAgent {
     }
 
     @Action
-    @AchievesGoal(description = "Player count has been determined.")
-    public PlayerCount determinePlayerCount(PlayerCountIntent intent, GameRules gameRules, OperationContext context) {
+    @AchievesGoal(description = "Player count has been determined.",
+            export = @Export(
+                    name = "gamePlayerCount",
+                    remote = true,
+                    startingInputTypes = UserInput.class))
+    public PlayerCount determinePlayerCount(UserInput userInput, GameRules gameRules, OperationContext context) {
         log.info("Determining player count from rules for: {}",
                 gameRules.gameTitle());
 
@@ -106,41 +114,6 @@ public class GameInfoAgent {
         return context.ai().withDefaultLlm()
                 .createObject(prompt, RulesFile.class);
     }
-
-    @Action
-    public GameTitle extractGameTitle(UserInput userInput, OperationContext context) {
-        log.info("Extracting game title from user input");
-
-        var prompt = promptResourceToString(determineTitlePromptTemplate,
-                Map.of("userInput", userInput.getContent()));
-
-        return context.ai().withDefaultLlm()
-                .createObject(prompt, GameTitle.class);
-    }
-
-    @Action
-    public QuestionIntent classifyIntent(UserInput userInput, OperationContext context) {
-        var prompt = promptResourceToString(
-                intentClassifierPromptTemplate,
-                Map.of("userInput", userInput.getContent())
-        );
-        return context.ai().withDefaultLlm().createObject(prompt, QuestionIntent.class);
-    }
-
-    @Action
-    public PlayerCountIntent playerCountIntent(QuestionIntent intent) {
-        return intent != null && intent.type() == IntentType.PLAYER_COUNT
-                ? new PlayerCountIntent()
-                : null;
-    }
-
-    @Action
-    public MechanicsIntent mechanicsIntent(QuestionIntent intent) {
-        return intent != null && intent.type() == IntentType.MECHANICS
-                ? new MechanicsIntent()
-                : null;
-    }
-
 
     private String promptResourceToString(
             Resource resource, Map<String, String> params) {
