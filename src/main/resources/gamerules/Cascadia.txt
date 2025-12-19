@@ -1,0 +1,7 @@
+Cascadia
+
+Number of Players:
+Cascadia supports 1 to 4 players, including a solo mode.
+
+Game Mechanics:
+Cascadia combines tile drafting, pattern building, and spatial puzzle mechanics. On each turn, players select a pair consisting of a habitat tile and a wildlife token. Habitat tiles are placed to form contiguous terrain types, while wildlife tokens are placed to satisfy species-specific scoring conditions. Each animal type has multiple possible scoring cards, introducing variability and replayability. Scoring rewards both large habitat corridors and correct wildlife arrangements, requiring players to balance short-term placement with long-term optimization. Player interaction is indirect, primarily through drafting competition.

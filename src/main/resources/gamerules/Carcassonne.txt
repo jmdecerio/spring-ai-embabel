@@ -1,0 +1,7 @@
+Carcassonne
+
+Number of Players:
+Carcassonne supports 2 to 5 players.
+
+Game Mechanics:
+Carcassonne is a tile placement game combined with area control and majority influence mechanics. Players take turns drawing and placing landscape tiles that depict cities, roads, fields, and monasteries. After placing a tile, a player may deploy a meeple to claim ownership of a feature. Points are scored when features are completed, based on size and structure. Fields are scored at the end of the game, rewarding long-term strategic planning. Player interaction emerges through competition for control of shared features and optimal tile placement.

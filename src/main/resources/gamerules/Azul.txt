@@ -1,0 +1,7 @@
+Azul
+
+Number of Players:
+Azul supports 2 to 4 players.
+
+Game Mechanics:
+Azul is primarily based on tile drafting and pattern building mechanics. During the game, players draft colored tiles from shared factory displays and place them into pattern lines on their personal player boards. Once a pattern line is completed, tiles are transferred to a scoring wall following strict placement rules. Scoring is determined by adjacency and alignment of tiles on the wall, encouraging spatial optimization. The game also includes negative scoring through tile overflow penalties, introducing risk management and tactical decision-making. Player interaction is indirect, mainly through competition for shared tiles.

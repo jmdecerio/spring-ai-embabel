@@ -1,0 +1,7 @@
+Point Salad
+
+Number of Players:
+Point Salad supports 2 to 6 players.
+
+Game Mechanics:
+Point Salad is a fast-paced card drafting and set collection game with variable scoring conditions. Cards can be used in two distinct ways: as vegetables that contribute to sets, or as scoring cards that define how points are calculated. Players draft cards from a shared market, making constant decisions between immediate resource gain and long-term scoring strategy. The game emphasizes adaptability, as scoring rules change dynamically depending on the cards chosen. Interaction is indirect but constant, driven by competition over shared card availability.

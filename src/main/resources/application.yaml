@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-ai-embabel
+  main:
+    web-application-type: none
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+  swagger-ui:
+    path: /swagger-ui.html
+embabel:
+  models:
+    default-llm: gpt-4.1-mini
+    llms:
+      cheapest: gpt-4.1-mini
+      best: gpt-4.1
+boardgame:
+  rules:
+    path: gamerules

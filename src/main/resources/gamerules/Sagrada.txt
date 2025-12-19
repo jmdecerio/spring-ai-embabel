@@ -1,0 +1,7 @@
+Sagrada
+
+Number of Players:
+Sagrada supports 1 to 4 players, including a solo variant.
+
+Game Mechanics:
+Sagrada is a dice drafting and pattern construction game with strong constraint-based placement mechanics. Players draft dice from a shared pool and place them into a personal grid representing a stained-glass window. Placement is restricted by color and number constraints defined by the player’s window pattern, as well as adjacency rules. Scoring is determined by public objectives (shared by all players) and private objectives (unique to each player), while penalties are applied for unused spaces. The game emphasizes careful planning, spatial reasoning, and probabilistic decision-making.

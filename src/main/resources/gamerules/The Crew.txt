@@ -1,0 +1,7 @@
+The Crew: The Quest for Planet Nine
+
+Number of Players:
+The Crew supports 2 to 5 players.
+
+Game Mechanics:
+The Crew is a cooperative trick-taking game built around mission-based objectives and limited communication. Players must complete specific tasks, such as winning certain tricks or avoiding others, while following standard trick-taking rules. Communication between players is highly restricted, typically allowing only limited information sharing through predefined signals. Each mission introduces new constraints, increasing difficulty and requiring deeper coordination and inference. Success or failure is shared collectively by all players.

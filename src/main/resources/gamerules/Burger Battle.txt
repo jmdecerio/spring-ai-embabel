@@ -1,0 +1,7 @@
+Burger Battle
+
+Number of Players:
+Burger Battle is designed for 2 to 4 players.
+
+Game Mechanics:
+Burger Battle is a competitive card-based game focused on set collection and hand management. Players collect ingredient cards in order to complete burger recipes that score points. The game features a high level of direct player interaction, including mechanics that allow players to block, steal, or disrupt opponents’ progress (commonly referred to as “take-that” mechanics). Timing and opportunistic play are central, as players must decide when to complete burgers versus when to interfere with others. The exact balance of mechanics may vary slightly depending on the edition.
