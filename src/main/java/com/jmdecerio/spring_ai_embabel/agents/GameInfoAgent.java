@@ -115,6 +115,17 @@ public class GameInfoAgent {
                 .createObject(prompt, RulesFile.class);
     }
 
+    @Action
+    public GameTitle extractGameTitle(UserInput userInput, OperationContext context) {
+        log.info("Extracting game title from user input");
+
+        var prompt = promptResourceToString(determineTitlePromptTemplate,
+                Map.of("userInput", userInput.getContent()));
+
+        return context.ai().withDefaultLlm()
+                .createObject(prompt, GameTitle.class);
+    }
+
     private String promptResourceToString(
             Resource resource, Map<String, String> params) {
         try {
