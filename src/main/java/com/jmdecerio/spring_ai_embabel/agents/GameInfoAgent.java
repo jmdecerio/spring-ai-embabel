@@ -40,9 +40,6 @@ public class GameInfoAgent {
     @Value("classpath:/promptTemplates/determineTitle.st")
     Resource determineTitlePromptTemplate;
 
-    @Value("classpath:/promptTemplates/intentClassifier.st")
-    Resource intentClassifierPromptTemplate;
-
     private final String rulesFilePath;
 
     public GameInfoAgent(
