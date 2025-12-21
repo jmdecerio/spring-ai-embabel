@@ -19,5 +19,5 @@ boardgame:
   rules:
     path: gamerules
 server:
-  port: 8081
+  port: 8080
 

@@ -1,4 +1,6 @@
 package com.jmdecerio.spring_ai_embabel.model;
 
-public record GameMechanics(String gameTitle, String mechanics) {
+import org.checkerframework.checker.units.qual.A;
+
+public record GameMechanics(String gameTitle, String mechanics) implements Answer {
 }
